@@ -120,7 +120,7 @@ const PokemonPage = (props: PokemonPageProps) => {
               backgroundColor: addOpacity(bgColour, 0.6),
             }}
           >
-            <thead className="w-2/3">
+            <thead>
               <tr>
                 <th style={styles.tableRow}>Stat</th>
                 <th style={styles.tableRow}>Value</th>
@@ -129,7 +129,9 @@ const PokemonPage = (props: PokemonPageProps) => {
             <tbody>
               <tr className="text-center">
                 <td style={styles.tableRow}>Height</td>
-                <td style={styles.tableRow}>{pokemonInfo.height / 10} m</td>
+                <td style={styles.tableRow} className="w-[100px]">
+                  {pokemonInfo.height / 10} m
+                </td>
               </tr>
               <tr className="text-center">
                 <td style={styles.tableRow}>Weight</td>
