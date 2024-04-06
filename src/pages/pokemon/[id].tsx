@@ -1,5 +1,5 @@
 import { PokemonInfo } from "@/_types/pokemon.d";
-import { X } from "lucide-react";
+import { ArrowBigLeft, ArrowBigRight, X } from "lucide-react";
 import { GetServerSideProps } from "next";
 import Link from "next/link";
 
@@ -166,6 +166,22 @@ const PokemonPage = (props: PokemonPageProps) => {
               })}
             </tbody>
           </table>
+        </div>
+        <div className="flex flex-row justify-between">
+          <Link
+            href={`/pokemon/${pokemonInfo.id - 1}`}
+            className="text-xl my-2 flex flex-row items-center"
+          >
+            <ArrowBigLeft fill={bgColour} />
+            Previous Pokemon
+          </Link>
+          <Link
+            href={`/pokemon/${pokemonInfo.id + 1}`}
+            className="text-xl my-2 flex flex-row items-center"
+          >
+            Next Pokemon
+            <ArrowBigRight fill={bgColour} />
+          </Link>
         </div>
       </div>
     </div>
